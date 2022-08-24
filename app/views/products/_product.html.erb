@@ -14,6 +14,9 @@
       <% end %>
     </div>
   <% else %>
-    <div> No stock homeskillet! </div>
+     <div>
+      <button class= "btn btn-danger"> Sold Out </button>
+      <button class= "btn" disabled> <%= fa_icon "shopping-cart", text: 'Add' %> </button>
+    </div>
   <%end%>
 </article>
