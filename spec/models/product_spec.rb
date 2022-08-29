@@ -9,7 +9,7 @@ RSpec.describe Product, type: :model do
   end
 
 
-  describe 'Product Validations' do
+  describe 'Validations' do
     # check that a product with all data will be valid
     it "product saves when all fields are present" do
       @valid_product = Product.new(name: 'Danek', price: 1337, quantity: 23, category: @category)
