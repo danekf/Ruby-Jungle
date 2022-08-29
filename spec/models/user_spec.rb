@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'has a password' do
-      skip
+      expect(@user).to_not be_valid
     end
 
     it 'has a confirmed passsword' do
