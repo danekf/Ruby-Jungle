@@ -9,7 +9,7 @@ RSpec.describe User, type: :model do
 
   describe 'Validations' do
     it 'saves when all data is present' do
-      @valid_user = User.new(first_name: 'D',last_name: 'F' email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+      @valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
       expect(@valid_user).to be_valid
     end
 
@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'has the same password and password_confirmation' do
-      @valid_user = User.new(name: 'D',last_name: 'F' email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePasswords')
+      @valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePasswords')
       expect(@valid_user).to_not be_valid
     end
 
@@ -34,8 +34,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'has a unique email' do
-      @valid_user = User.new(first_name: 'D',last_name: 'F' email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
-      @valid_user2 = User.new(first_name: 'C',last_name: 'F' email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+      @valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+      @valid_user2 = User.new(first_name: 'C',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
       @valid_user.save
       @valid_user2.save
       expect(@valid_user).to be_valid
