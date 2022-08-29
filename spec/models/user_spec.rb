@@ -22,8 +22,9 @@ RSpec.describe User, type: :model do
       expect(@user.errors.messages[:password_confirmation]).to include('can\'t be blank')
     end
 
-    it 'has the same password and confirmed password' do
-      skip
+    it 'has the same password and password_confirmation' do
+      @valid_user = User.new(name: 'D', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePasswords')
+      expect(@valid_user).to_not be_valid
     end
 
     it 'has an email' do
@@ -36,13 +37,13 @@ RSpec.describe User, type: :model do
       @valid_user2 = User.new(name: 'C', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
       @valid_user.save
       @valid_user2.save
-
       expect(@valid_user).to be_valid
       expect(@valid_user2).to_not be_valid
-
-
       expect(@valid_user2.errors.messages[:email]).to include('has already been taken')
+    end
 
+    it 'template' do
+      skip
     end
   end
 end
