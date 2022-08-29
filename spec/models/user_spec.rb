@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
   describe 'User Validations' do
     it 'saves when all data is present' do
-      @valid_user = User.new(first_name: 'D', last_name: 'F', email: 'unique@email.com', password: 'securePassword', passsword_confirmation: 'securePassword')
+      @valid_user = User.new(name: 'D', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
       expect(@valid_user).to be_valid
     end
 
