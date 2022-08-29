@@ -12,13 +12,15 @@ class User < ApplicationRecord
 
   def self.authenticate_with_credentials(email, password)
     #format input email for lowercase
-    formatted_email = email.downcase.lstrip
-
     # Check that there is a user with given email
-    user = User.find(email: formatted_email)
+    user = User.find_by_email(email.strip.downcase)
 
     #Once found, confirm password match using authentication
-    ## return that we found both the requested user AND the password matches
-    user && user.authenticate(password)
+    if user && user.authenticate(password)
+      # if match, return the user that was found
+      user
+    else
+      nil
+    end
   end
 end

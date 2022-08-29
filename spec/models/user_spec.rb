@@ -49,7 +49,14 @@ RSpec.describe User, type: :model do
     end
   
     describe '.authenticate_with_credentials' do
-      
+      it 'should authenticate if email and password are correct' do
+        valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+        valid_user.save
+        user = User.authenticate_with_credentials(valid_user.email, valid_user.password)
+
+        expect(user.email).to eq(valid_user.email)
+      end
+
     end  
   end
 end
