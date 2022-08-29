@@ -70,6 +70,19 @@ RSpec.describe User, type: :model do
         expect(user).to eq(nil)
       end
 
+      it 'should ignore white spaces in email' do
+        valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+        valid_user.save
+        user = User.authenticate_with_credentials('   unique@email.com    ', valid_user.password)
+        expect(user.email).to eq(valid_user.email)
+      end
+
+      it 'should ignore case for email' do
+        valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+        valid_user.save
+        user = User.authenticate_with_credentials('uNiQuE@eMaIl.CoM', valid_user.password)
+        expect(user.email).to eq(valid_user.email)
+      end
 
     end  
   end
