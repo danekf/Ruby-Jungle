@@ -53,9 +53,23 @@ RSpec.describe User, type: :model do
         valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
         valid_user.save
         user = User.authenticate_with_credentials(valid_user.email, valid_user.password)
-
         expect(user.email).to eq(valid_user.email)
       end
+
+      it 'should not authenticate if email does not exist in db' do
+        valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+        valid_user.save
+        user = User.authenticate_with_credentials('wrongEmail@email.com', valid_user.password)
+        expect(user).to eq(nil)
+      end
+
+      it 'should not authenticate if password is incorrect' do
+        valid_user = User.new(first_name: 'D',last_name: 'F', email: 'unique@email.com', password: 'securePassword', password_confirmation: 'securePassword')
+        valid_user.save
+        user = User.authenticate_with_credentials(valid_user.email, 'WrongPassword')
+        expect(user).to eq(nil)
+      end
+
 
     end  
   end
