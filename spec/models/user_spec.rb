@@ -28,6 +28,11 @@ RSpec.describe User, type: :model do
       expect(@valid_user).to_not be_valid
     end
 
+    it 'requires a minimum password length' do
+      expect(@user).to_not be_valid
+      expect(@user.errors.messages[:password_confirmation]).to include('is too short (minimum is 6 characters)')
+    end
+
     it 'has an email' do
       expect(@user).to_not be_valid
       expect(@user.errors.messages[:email]).to include('can\'t be blank')
@@ -43,8 +48,6 @@ RSpec.describe User, type: :model do
       expect(@valid_user2.errors.messages[:email]).to include('has already been taken')
     end
 
-    it 'template' do
-      skip
-    end
+
   end
 end
