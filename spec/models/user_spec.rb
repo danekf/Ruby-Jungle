@@ -47,7 +47,11 @@ RSpec.describe User, type: :model do
       expect(@valid_user2).to_not be_valid
       expect(@valid_user2.errors.messages[:email]).to include('has already been taken')
     end
-
-
+  
+    describe '.authenticate_with_credentials' do
+      
+    end  
   end
 end
+
+
