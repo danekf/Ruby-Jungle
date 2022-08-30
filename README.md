@@ -77,7 +77,7 @@ The following examples will show useage of the jungle project from the client pe
 When a client first loads the page, they are presented with a homepage that lists the latest products, as well as a description of what jungle is all about.
 
 <div align = "center">
-  <img src = images/home-products.png width = 70%> </a>
+  <img src = images/home-products.png width = 90%> </a>
 </div>
 The top bar shows all categories of plants. Including a mock "Pizza" plant category created by a creative admin. It also will show whether the client is currently logged in, an admin dropdown menu and access to a cart.
 
@@ -86,13 +86,13 @@ It also lists the latest products from the database.
 When a client clicks on a category of product, a page is loaded and is populated with a list of all plants for that category. For example, this is what a user will see when they click on "Shrubs" in the top bar.
 
 <div align = "center">
-  <img src = images/product-category.png width = 70%> </a>
+  <img src = images/product-category.png width = 90%> </a>
 </div>
 
 This would be the page if a user chooses to explore the rare "Pizza" plant category, as another example.
 
 <div align = "center">
-  <img src = images/product-pizza.png width = 70%> </a>
+  <img src = images/product-pizza.png width = 90%> </a>
 </div>
 
 We can see that only a single plant is loaded in this case.
@@ -101,13 +101,13 @@ We can see that only a single plant is loaded in this case.
 A user can also click on any product card to load a page with details of that plant.
 
 <div align = "center">
-  <img src = images/product-details.png width = 70%> </a>
+  <img src = images/product-details.png width = 90%> </a>
 </div>
 
 When a user clicks on ADD on any product card, the product is added to their cart.
 
 <div align = "center">
-  <img src = images/cart.png width = 70%> </a>
+  <img src = images/cart.png width = 90%> </a>
 </div>
 
 We can see that the cart has changed to now show that there is (1) item in the cart.
@@ -115,12 +115,12 @@ We can see that the cart has changed to now show that there is (1) item in the c
 A user is then able to checkout. Clicking on the "Pay with card" button will allow a user to pay with their credit card using stripe. A developper will then use the provided stripe test card number to process the payment.
 
 <div align = "center">
-  <img src = images/checkout.gif width = 70%> </a>
+  <img src = images/checkout.gif width = 90%> </a>
 </div>
 
 The user is then presented with an itemized order confirmation.
 <div align = "center">
-  <img src = images/order-complete.png width = 70%> </a>
+  <img src = images/order-complete.png width = 90%> </a>
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -134,13 +134,13 @@ When a new category is created, a link in the top nav bar is automatically creat
 When clicking on the admin secition, Jungle will ask for the admin User and password. Once logged in sucessfully, the admin can browse any admin page and make changes.
 
 <div align = "center">
-  <img src = images/admin-login.gif width = 70%> </a>
+  <img src = images/admin-login.gif width = 90%> </a>
 </div>
 
 For example, an admin can click on the +New product button on the all products page. Here they are able to add a new product and select from a dropdown menu for which category it belongs in.
 
 <div align = "center">
-  <img src = images/admin-newProduct.png width = 70%> </a>
+  <img src = images/admin-newProduct.png width = 90%> </a>
 </div>
 
 The admin can do the same for a new category, such as the delightful and ficticious Pizza category.
