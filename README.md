@@ -1,6 +1,28 @@
+<a name="readme-top"></a>
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+<div align="center">
+  <a  href = 'https://github.com/danekf/Ruby-Jungle'>
+    <img src = images/home.png width = 70%> </a>
+</div>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+  </ol>
+</details>
+<br>
+
+# About the project
+A mini e-commerce application built with Rails 6.1 for purposes of learning rails. Implements secure user registration and login. Admin pages locked behind simple authentication allow admin to add products or categories.
+
+Project uses stripe integration to process payments.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
 
 ## Setup
 
@@ -13,9 +35,15 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+
 ## Database
 
 If Rails is complaining about authentication to the database, uncomment the user and password fields from `config/database.yml` in the development and test sections, and replace if necessary the user and password `development` to an existing database user.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
 
 ## Stripe Testing
 
@@ -29,3 +57,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- Cypress 9.7.0
+- Webpack-dev-server
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+

@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
     else
       #redirect to login page if something failed
       redirect_to '/login'
+    end
   end
 
 end
