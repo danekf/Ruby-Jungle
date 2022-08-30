@@ -19,6 +19,7 @@
         <li><a href="#Client-Example">Client Example</a></li>
         <li><a href="#Admin-Example">Admin Example</a></li>
       </ul>
+      <li><a href="#Roadmap">Roadmap</a></li>
   </ol>
 </details>
 <br>
@@ -144,3 +145,29 @@ For example, an admin can click on the +New product button on the all products p
 </div>
 
 The admin can do the same for a new category, such as the delightful and ficticious Pizza category.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+
+# Testing
+
+Testing uses cypress. To run cypress testing run:
+
+```sh
+bin/rails cypress:run
+```
+Testing files are located under cypress/integration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+
+# Roadmap
+
+<ul>
+<li>[ ] Email copy of receipt to client, on order completion</li>
+<li>[ ] Add user rating to products</li>
+<li>[ ] Increase cypress testing to include all new features and admin functions.
+<li>[ ] (Stretch Goal) Create real world pizza plant</li>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
